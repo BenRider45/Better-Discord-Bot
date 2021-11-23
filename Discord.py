@@ -30,9 +30,8 @@ async def on_guild_join(Guild):
 @client.event
 async def on_member_join(member):
     Guild = member.guild
-    embed = discord.Embed(description = f"{member.mention} does two things, chew gum and eat ass. And theyre all out of gum.", color=0xE74C3C)
+    embed = discord.Embed(description = f"Who let {member.mention} in?", color=0xE74C3C)
     await Guild.text_channels[0].send(embed=embed)
-    print(f'{member} does two things, chew gum and eat ass. And theyre all out of gum.')
 
 
 @client.event
@@ -61,7 +60,7 @@ async def luigi(ctx):
     
     with open("luigi.txt","r") as file:
         msg1= file.read()
-    msg2="You just got Luigied! Use the "";Luigi"" command to totally Luigi someone random in your server! "
+    msg2="You just got Luigied! Use the command, "";Luigi"" to totally Luigi someone random in your server! "
     embed = discord.Embed(description = msg2, color=0xE74C3C)    
     await member.send(msg1)
     await member.send(embed=embed)
