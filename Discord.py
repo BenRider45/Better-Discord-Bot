@@ -53,7 +53,7 @@ async def ping(ctx):
      await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
 @client.command()
-async def Luigi(ctx):
+async def luigi(ctx):
     while True:
         member=random.choice(ctx.guild.members)
         if member.bot==False:  
