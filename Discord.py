@@ -60,7 +60,7 @@ async def Luigi(ctx):
     
     with open("luigi.txt","r") as file:
         msg1= file.read()
-    msg2="You just got Luigied! Use the "";Luigi"" command to totally Luigi someone random in your server! "
+    msg2="You just got Luigied! Use the command, "";Luigi"" to totally Luigi someone random in your server! "
     embed = discord.Embed(description = msg2, color=0xE74C3C)    
     await member.send(msg1)
     await member.send(embed=embed)
