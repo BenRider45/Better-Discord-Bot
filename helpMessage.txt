@@ -1,0 +1,4 @@
+Welcome to the Better Rhythm Bot (BRB). The Rhythm bot with server mod functions built in!
+
+Commands:
+;help | Messages user a list of all available commands
