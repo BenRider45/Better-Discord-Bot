@@ -1,4 +1,13 @@
 Welcome to the Better Rhythm Bot (BRB). The Rhythm bot with server mod functions built in!
 
 Commands:
+
 ;help | Messages user a list of all available commands
+
+;ping | Returns the current ping rate of the bot to the user
+
+;join | Connects the bot to the voice channel the user is in
+
+;leave| Disconnects the bot from the voice channel it is currently in (requires that the user be in the same voice channel)
+
+;Luigi| Luigis a random person in the server by sending them this gif: https://tenor.com/view/liugi-gif-22098615
