@@ -55,9 +55,8 @@ async def ping(ctx):
 async def luigi(ctx):
     while True:
         member=random.choice(ctx.guild.members)
-        if member.bot==False:  
-            break
-    
+        if member.bot==False and member!= ctx.author:  
+            break        
     with open("luigi.txt","r") as file:
         msg1= file.read()
     msg2="Use the command, "";Luigi"" to totally Luigi someone random in your server! "
