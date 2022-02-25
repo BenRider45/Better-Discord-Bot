@@ -12,3 +12,5 @@ Welcome to the Better Discord Bot (BDB for short) A music playing bot (eventuall
 * `;leave`| Disconnects the bot from the voice channel it is currently in (requires that the user be in the same voice channel)
 
 * `;Luigi`| Luigis a random person in the server by sending them [this gif](https://tenor.com/view/liugi-gif-22098615)
+
+* `;mock *User*` | Replies to the mentioned person's last valid message in a mocking manner (LiKe ThIs)

@@ -13,7 +13,6 @@ with open('Token.txt') as f:
     TOKEN = f.readline()
 client.remove_command('help')
 
-
 @client.event  
 async def on_ready():
     print("Bot is ready.")
@@ -50,6 +49,40 @@ async def help(ctx):
 @client.command()
 async def ping(ctx):
      await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+
+@client.command()
+async def mock(ctx):
+    
+    SpaceLoc= ctx.message.content.find(" ")
+    User= ctx.message.content[SpaceLoc+1:]
+    
+    async for message in ctx.channel.history(limit=1):
+        fetchMessage=message
+    i=0
+    async for message in ctx.channel.history(before=fetchMessage): 
+        i+=1
+        fetchMessage = message
+        if i ==100 and fetchMessage.author.display_name!=User:
+            await ctx.send("Cannot find user message!")
+            return
+        
+        if("https://" in fetchMessage.content or len(fetchMessage.content)==0) or fetchMessage.author.display_name!= User:
+            continue
+        else:
+            break
+    
+
+
+    i=1
+    output=""
+    for char in fetchMessage.content:
+        if(i>0):
+            output+=char.upper()
+        else:
+            output+=char
+        i*=-1
+
+    await ctx.send(output,reference=fetchMessage)
 
 @client.command()
 async def luigi(ctx):
